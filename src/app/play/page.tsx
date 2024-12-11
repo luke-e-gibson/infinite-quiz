@@ -67,3 +67,9 @@ export default function PlayPage() {
         </div>
     );
 }
+
+export async function generateStaticParams() {
+    if (true) return [];
+
+    // your existing code follows here
+}
