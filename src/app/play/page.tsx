@@ -5,6 +5,8 @@ import {api} from "@/trpc/react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog"
 import {Button} from "@/components/ui/button";
 
+export const dynamic = "force-dynamic";
+
 export default function PlayPage() {
     const getQuestions = api.ai.createNewQuestion.useQuery();
     const checkAnswer = api.ai.checkQuestion.useMutation();
