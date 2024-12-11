@@ -1,15 +1,13 @@
 "use client"
 import Link from "next/link";
-import {Suspense, useEffect, useState} from "react";
+import {Suspense, useState} from "react";
 import {api} from "@/trpc/react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog"
-import {useRouter} from "next/navigation";
 import {Button} from "@/components/ui/button";
 
 export default function PlayPage() {
     const getQuestions = api.ai.createNewQuestion.useQuery();
     const checkAnswer = api.ai.checkQuestion.useMutation();
-    const router = useRouter();
     const [question] = api.ai.createNewQuestion.useSuspenseQuery()
     const [questionsCompleted, setQuestionsCompleted] = useState<number>(0);
     const [answers, setAnswers] = useState<string>("");
