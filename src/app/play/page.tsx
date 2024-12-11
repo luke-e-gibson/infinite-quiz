@@ -1,4 +1,3 @@
-"use client"
 import Link from "next/link";
 import {Suspense, useState} from "react";
 import {api} from "@/trpc/react";
@@ -66,10 +65,4 @@ export default function PlayPage() {
             </Dialog>
         </div>
     );
-}
-
-export async function generateStaticParams() {
-    if (true) return [];
-
-    // your existing code follows here
 }
