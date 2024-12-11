@@ -54,7 +54,7 @@ export default function PlayPage() {
                         <DialogTitle>Game Over</DialogTitle>
                         <Suspense>
                             <DialogDescription>You have completed {questionsCompleted} questions. You failed on
-                                "{question.question}". The reason being {endRession}</DialogDescription>
+                                <p className="text-bold">{question.question}</p>. The reason being <p className="text-bold">{endRession}</p></DialogDescription>
                         </Suspense>
                     </DialogHeader>
                     <DialogFooter>
