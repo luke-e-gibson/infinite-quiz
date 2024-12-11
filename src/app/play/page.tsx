@@ -1,10 +1,12 @@
+"use client"
+
 import Link from "next/link";
 import {Suspense, useState} from "react";
 import {api} from "@/trpc/react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog"
 import {Button} from "@/components/ui/button";
 
-export const dynamic = "force-dynamic";
+export const dynamic = "error";
 
 export default function PlayPage() {
     const getQuestions = api.ai.createNewQuestion.useQuery();
